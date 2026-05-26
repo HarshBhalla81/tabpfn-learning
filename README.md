@@ -2,11 +2,11 @@
 
 This repository documents my exploration and experimentation with **TabPFN** (Tabular Prior-Data Fitted Network), a revolutionary pretrained transformer model designed specifically for tabular data classification.
 
-## 🚀 Overview
+##  Overview
 
 TabPFN represents a shift in how we approach tabular machine learning. Unlike classical models that learn decision boundaries from scratch for every new dataset, TabPFN performs **Amortized Bayesian Inference**. It was pretrained on millions of synthetic datasets to approximate the posterior predictive distribution, allowing it to make highly accurate predictions on new, unseen data in a single forward pass without any hyperparameter tuning.
 
-## 📊 Experimental Results
+##  Experimental Results
 
 In my experiments, I compared TabPFN against several industry-standard classical machine learning models using the **Digits** dataset from scikit-learn.
 
@@ -24,7 +24,7 @@ In my experiments, I compared TabPFN against several industry-standard classical
 *   **Zero Tuning**: While models like SVM and Random Forest often require scaling and hyperparameter optimization, TabPFN worked optimally "out of the box."
 *   **Efficiency in Low-Data Regimes**: To fit within the model's operational constraints, I successfully reduced the dataset size and observed that TabPFN's performance remained robust, highlighting its strength in small-data scenarios.
 
-## 🧠 Technical Learnings
+##  Technical Learnings
 
 ### 1. Amortized Bayesian Inference
 Classical models learn dataset-specific parameters during the `fit()` process. TabPFN, however, uses its pretrained transformer weights to compare new examples contextually, effectively performing Bayesian-style averaging.
@@ -42,7 +42,7 @@ TabPFN is optimized for datasets with:
 
 By intelligently reducing the dataset size, I was able to leverage the full power of the model while maintaining perfect classification results.
 
-## 📚 Theoretical Foundations
+##  Theoretical Foundations
 
 My learning journey covered the core mathematical pillars of PFNs:
 *   **Bayes' Theorem**: Understanding the relationship between prior, likelihood, and posterior.
